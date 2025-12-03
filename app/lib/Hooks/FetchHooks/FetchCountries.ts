@@ -10,7 +10,7 @@ export const fetchCountries = async () => {
     try {
         const response = await countryApi.get<Country[]>("/all", {
             params: {
-                fields: "name, population, cca2, flag"
+                fields: "name,population,cca2,flag"
             }
         })
         return response.data;
@@ -18,4 +18,4 @@ export const fetchCountries = async () => {
         console.error("Error fetching countries:", error);
         throw error;
     }
-}''
+}
